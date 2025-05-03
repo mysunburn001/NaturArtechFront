@@ -26,11 +26,18 @@
     12.3 FAQ
     12.4 JOB
     12.5 Intro Form
-13. Responsive
+13. Responsive 
+
+--------------------------------------*/
+
+@font-face {
+  font-family: 'MyWebFont';
+  src: url('../fonts/WoodfordBournePro-Thin.woff') format('woff'), /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+       url('../fonts/WoodfordBournePro-Thin.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+}
 
 
-
--------------------------------------------------------------------*/
+/*-----------------------------Index--------------------------------------*/
 
 .contenido {
   position: relative;
@@ -105,12 +112,22 @@ img.rotar {
     -webkit-animation-timing-function: linear;
 }
 
-#myVideo {
+#VideoIni {
   position: fixed;
   right: 0;
   bottom: 0;
   min-width: 50%;
   min-height: 50%;
+}
+
+#Nosotros {
+  background: url("../images/nosotros.jpg") no-repeat;
+  background-size: cover;         /* Ensures the image fills the screen */
+  background-position: center;    /* Keeps the focal point centered */
+  background-attachment: fixed;   /* Optional: keeps background static while scrolling */
+  width: 100vw;
+  height: 100vh;
+  
 }
 
 .info-container {
@@ -219,14 +236,140 @@ img.rotar {
   }
 }
 
-@font-face {
-  font-family: 'MyWebFont';
-  src: url('../fonts/WoodfordBournePro-Thin.woff') format('woff'), /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-       url('../fonts/WoodfordBournePro-Thin.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+
+/*-----------------------------Index--------------------------------------*/
+
+/*-----------------------------Nosotros--------------------------------------*/
+
+.bubbles-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: rgba(255, 255, 255, 0.1); /* transparent over bg if needed */
+  padding: 2rem;
 }
 
-/*-------------------------------------------------------------------*/
+.bubble-container {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 
+.bubble {
+  width: 300px;
+  height: 300px;
+  background: linear-gradient(135deg, #52b997, #206d99, #c7dfd9);
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  opacity: 0.9;
+  cursor: pointer;
+  transition: transform 0.3s ease, opacity 0.3s ease, box-shadow 0.3s ease;
+  animation: floatBubbles 5s ease-in-out infinite;
+  position: relative;
+  overflow: hidden;
+}
+
+.bubble h2 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  color: white;
+}
+
+/* Animation for bubbles floating */
+@keyframes floatBubbles {
+  0% {
+    transform: translateY(0);
+    opacity: 0.9;
+  }
+  50% {
+    transform: translateY(-20px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 0.9;
+  }
+}
+
+.bubble-content, .reveal-text {
+  position: absolute;
+  text-align: center;
+  padding: 10px;
+}
+
+/* When bubble is revealing content */
+.bubble.reveal-mode {
+  width: 300px;
+  height: 300px;
+  border-radius: 20px;
+  padding: 20px;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  overflow: auto;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  animation: none;
+}
+
+.reveal-text {
+  display: none;
+  font-size: 16px;
+  line-height: 1.6;
+  padding: 10px 20px;
+  animation: fadeIn 0.5s ease-in-out forwards;
+}
+.bubble.explode {
+  animation: explode 0.5s ease forwards;
+}
+
+@keyframes explode {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Revert animation */
+.bubble.revert {
+  animation: revertBubble 0.3s ease forwards;
+}
+
+@keyframes revertBubble {
+  from {
+    transform: scale(0.8);
+    opacity: 0.5;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+
+/*-----------------------------Nosotros--------------------------------------*/
 
 /*======= 1.Reset ======== */
 body {
