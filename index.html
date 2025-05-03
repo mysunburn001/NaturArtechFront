@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="A fully featured admin theme which can be used to build CRM, CMS, etc.">
+        <meta name="author" content="Coderthemes">
+
+        <link rel="shortcut icon" href="images/favicon.png">
+
+        <title>NaturArtech - Home</title>
+
+        <!-- Google Fonts -->
+        <!--<link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'> -->
+
+        <!-- Bootstrap core CSS -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Icon CSS -->
+        <link href="css/font-awesome.min.css" rel="stylesheet">
+
+        <!-- Custom styles for this template -->
+        <link href="css/style.css" rel="stylesheet">
+
+        <link href="css/bootstrap-datepicker.min.css" rel="stylesheet">
+
+        <link href="css/sweet-alert.css" rel="stylesheet">
+
+        <!-- Owl Carousel CSS -->
+        <link href="css/owl.carousel.css" rel="stylesheet">
+        <link href="css/owl.theme.default.min.css" rel="stylesheet">
+
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 tooltipss and media queries -->
+        <!--[if lt IE 9]>
+          <script src="js/html5shiv.js"></script>
+          <script src="js/respond.min.js"></script>
+        <![endif]-->
+
+    </head>
+
+
+
+    <body data-spy="scroll" data-target="#navbar-menu">
+
+        <!-- Navbar -->
+        <div class="navbar navbar-custom sticky navbar-fixed-top" role="navigation" id="sticky-nav">
+            <div class="container">
+
+                <!-- Navbar-header -->
+                <div class="navbar-header">
+
+                    <!-- Responsive menu button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                    <!-- LOGO -->
+
+                    <a class="" href="index.html" >
+                        <img src="images/logo-gif.gif" width="80px" height="80px"  alt="logo..." class="hidden-md hidden-lg">
+                        <img src="images/letras-blanco-t.png" width="360px" height="60px"  alt="logo..." class="hidden-xs hidden-sm"> 
+                    </a>
+
+                </div>
+                <!-- end navbar-header -->
+
+                <!-- menu -->
+                <div class="navbar-collapse collapse" id="navbar-menu">
+
+                    <!-- Navbar right -->
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="active">
+                            <a href="#home" class="nav-link">Inicio</a>
+                        </li>
+                        <li>
+                            <a href="nosotros.html" class="nav-link">¿Quienes somos?</a>
+                        </li>
+                        <li>
+                            <a href="productos.html" class="nav-link">Productos</a>
+                        </li>
+                        <li>
+                            <a href="#testimonios" class="nav-link">Testimonios</a>
+                        </li>
+                        <li>
+                            <a href="#testimonios" class="nav-link">Responsabilidad social</a>
+                        </li>
+                        <li>
+                            <a data-toggle="modal" data-target="#modal-login" class="btn btn-white-bordered navbar-btn">Inicia Sesion</a>
+                        </li>
+                        <li class="zoom">
+                            <a href="https://wa.me/+5216361176326?text=Hola%20quisiera%20recibir%20mas%20información%20sobre%20su%20producto" target="_blank" class="nav-link" ><i class="fa fa-whatsapp fa-lg" aria-hidden="true" ></i></a>
+                        </li> 
+                    </ul>
+
+                </div>
+                <!--/Menu -->
+            </div>
+            <!-- end container -->
+        </div>
+        <!-- End navbar-custom -->
+
+        <!-- modal -->
+        <div id="modal-login" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+            <div class="modal-dialog"> 
+                <div class="modal-content"> 
+                    <div class="modal-header"> 
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button> 
+                        <h4 class="modal-title" style="text-align: center;"><img src="images/logo-gif.gif" width="80px" height="80px" style= "border-radius: 100%" alt="logo...">   Inicia sesion o registrate</h4> 
+                    </div> 
+                    <div class="modal-body"> 
+
+                        <div id="LoginTab">
+
+                            <div class="form-group ">  
+                                <input class="form-control" type="text" id="Membresia" placeholder="Membresia">
+                            </div>
+    
+                            <div id="PreloaderLogin" hidden="true" align="center">
+                                <img src="images/preloader2.gif" alt="validando...">
+                            </div>
+                                  
+                            <div class="form-group">
+                                <button onClick="ValidateUserLogin();" class="btn btn-primary btn-block text-uppercase waves-effect waves-light" id="BotonLogin">Login</button>
+                            </div>
+            
+    
+                            <div class="form-group">
+                                <button class="btn btn-primary btn-block text-uppercase waves-effect waves-light" onClick="ShowPanel();" id="BotonPanelRegistro">Registro de Usuario</button>
+                            </div>
+    
+                          
+                        </div>
+    
+                        <div align="right">
+    
+                            <p>v1.0</p>
+                        </div>
+    
+                        <!--Tab Registro-->
+    
+                        <div id="RegistroClientes">
+    
+                            <div class="box-body">
+                             
+                                <div class="form-group">
+                                  <label for="Nombre">Nombre(s)</label>
+                                  <input type="text" class="form-control" id="Nombre" name="Nombre" placeholder="Nombre...">
+                                </div>
+    
+                                <div class="form-group">
+                                  <label for="Apaterno">Apellido Paterno</label>
+                                  <input type="text" class="form-control" id="Apaterno" name="Apaterno" placeholder="ej. Rodriguez">
+                                </div>
+    
+                                <div class="form-group" >
+                                  <label for="Amaterno">Apellido Materno</label>
+                                  <input type="text" class="form-control" id="Amaterno" name="Amaterno" placeholder="ej. Lopez">
+                                </div>
+    
+                                <div class="form-group" >
+                                  <label for="Telefono">Telefono</label>
+                                  <input type='text' class='form-control' id='Telefono'name='Telefono' placeholder='ej. 4425684739...' onKeyPress="if (event.keyCode < 48 || event.keyCode > 57) event.returnValue = false;"  onblur="RevisaTelefonoCliente()">
+                                </div>
+    
+                                <div class="form-group" >
+                                  <label for="Correo">Email</label>
+                                  <input type='email' class='form-control' id='Correo'name='Correo' placeholder='ej. ejemplo@mail.com...'  onblur="RevisaCorreoCliente()">
+                                </div>
+    
+                                <div class="form-group">
+    
+                                    <label for="FechaNCliente">Fecha de Nacimiento</label>
+                                    <input type="text" class="form-control" id="FechaNCliente" placeholder="yyyy/mm/dd " id="datepicker-autoclose">
+                                    <span class="input-group-addon bg-custom b-0 text-white"><i class="icon-calender"></i></span>
+    
+                                </div>
+    
+                                <div id="PreloaderRegistro" hidden="true" align="center">
+                                    <img src="images/preloader2.gif" alt="validando...">
+                                </div>
+                  
+                                <div>
+                                    <button class="btn btn-primary btn-block text-uppercase waves-effect waves-light" onClick="RegistroCliente();" id="BotonRegistro">Guardar</button>
+                                </div>
+    
+                                <br>
+        
+                                <div >
+                                    <button class="btn btn-primary btn-block text-uppercase waves-effect waves-light" onClick="HidePanel();" id="BotonBack">Volver</button>
+                                </div>
+    
+                            </div>   
+    
+                        </div>
+                    </div> 
+                    <div class="modal-footer"> 
+                        <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">Cerrar</button> 
+                    </div> 
+                </div> 
+            </div>
+        </div><!-- /.modal -->
+
+        <!-- HOME -->
+        <video autoplay muted loop id="myVideo">
+            <source src="images/intro.mp4" type="video/mp4">
+        </video>
+
+        <section class="home" id="home">
+            <div class="bg-overlay"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 text-start">
+                        <div class="home-fullscreen">
+                            <div class="full-screen">
+                                <div class="home-wrapper home-wrapper-alt" >
+
+                                    <h1 class="font-light text-white">Conozca a NATURARTECH</h1>
+                                    <h3 class="text-white">Nuestro compromiso radica en la investigación y formulación de fertilizantes, impulsando una agricultura regenerativa y sustentable.</h3>
+
+                                    <br><br><br><br>
+                                
+                                    <div class="info-container">
+                                        <div class="row text-white">
+
+                                            <div class="info-box col-md-3 col-12">
+                                                <i class="fa fa-flask icon" id="matraz"></i>
+                                                <h3>Innovación Biointeligente
+                                              </h3>
+                                                <p>Fusionamos ciencia y naturaleza para mejorar el rendimiento de tus cultivos sin dañar el entorno.
+                                              </p>
+                                              </div>
+                                              <div class="info-box col-md-3 col-12">
+                                                <i class="fa fa-pagelines icon" id="planta"></i>
+                                                <h3>Sostenibilidad Real
+                                              </h3>
+                                                <p>Productos creados con energía limpia, procesos responsables y colaboración con comunidades locales.
+                                              </p>
+                                              </div>
+                                              <div class="info-box col-md-3 col-12" >
+                                                <i class="fa fa-sun-o icon" id="sol"></i>
+                                                <h3>Revitaliza tus cultivos
+                                              </h3>
+                                                <p>Mejoramos la respuesta ante el estrés ambiental y optimizamos la nutrición del suelo.
+                                              </p>
+                                              </div>
+                                              <div class="info-box col-md-3 col-12">
+                                                <i class="fa fa-search icon"  id="lupa"></i>
+                                                <h3>Desarrollo con respaldo científico
+                                              </h3>
+                                                <p>Cada fórmula está basada en investigación avanzada y validación técnica en campo.</p>
+                                              </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- END HOME -->
+
+        <!-- Texto -->
+        <section class="section" id="Texto">
+
+            <div class="container">
+
+                <div class="row">
+                    <div class="col-sm-12 text-center" style="color: white;">
+                        <h1 class="">¿Cómo podemos ayudarte?</h1>
+                        <h4 class="">Control total</h4>
+                    </div>
+                    
+                </div> <!-- end row -->
+
+            </div>
+
+        </section>
+        <!-- end Texto -->
+
+        <!-- info -->
+        <section class="section" id="info">
+            
+            <div class="container-fluid">
+
+                <div class="row no-gutters">
+                    
+                    <div class="col-12 col-md-6 bg-img-left">
+                        <!-- <a href="#contacto" class="btn btn-white-bordered navbar-btn bottom-left">Contacto</a>-->
+                        <h2 class="center text-white">Informes y asistencia <br><br> Datos útiles</h2>
+                    </div>
+
+                    <div class="col-12 col-md-6 bg-img-right ">
+                        <h2 class="center text-white">Una granja conectada <br><br> Todo tipo de conexiones</h2>
+                        <!-- <a href="#contacto" class="btn btn-white-bordered navbar-btn bottom-left">Contacto</a>-->
+                    </div>
+
+                </div> <!-- end row -->
+
+            </div><!-- end container -->
+        </section>
+        <!-- end info -->
+
+          <!-- Texto 2 -->
+          <section class="section" id="Texto2">
+
+            <div class="container">
+
+                <div class="row">
+                    <div class="col-lg-12 text-center" style="color: white;">
+                        <h1 class="">Su éxito es lo que nos motiva</h1>
+                        <p class="">Descubra lo que nuestros clientes opinan</p>
+                    </div>
+                </div> <!-- end row -->
+
+            </div>
+
+        </section>
+        <!-- end Texto 2 -->
+
+        <!-- testimonios section -->
+        <section class="section" id="testimonios">
+            <div class="container">
+
+                <div class="row">
+
+                    <div class="owl-carousel text-center">
+                        <div class="item">
+                            <div class="col-lg-12" >
+                                <div class="features-box">
+                                    <i class="fa fa-quote-right"></i>
+                                    <p class="text-muted" style="color: white;">
+                                        Esta es la cita testimonial de tu cliente. Es un muy buen espacio para ofrecer al visitante una perspectiva de primera mano de los servicios que brindas compartiendo opiniones reales de empresas y líderes con los que ya has trabajado.
+                                        <br><br>R. Jiménez</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="col-lg-12">
+                                <div class="features-box">
+                                    <i class="fa fa-quote-right"></i>
+                                    <p class="text-muted" style="color: white;">
+                                        Esta es la cita testimonial de tu cliente. Es un muy buen espacio para ofrecer al visitante una perspectiva de primera mano de los servicios que brindas compartiendo opiniones reales de empresas y líderes con los que ya has trabajado.
+                                        <br><br>T. Gutiérrez</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item" >
+                            <div class="col-lg-12">
+                                <div class="features-box">
+                                    <i class="fa fa-quote-right"></i>
+                                    <p class="text-muted" style="color: white;">Esta es la cita testimonial de tu cliente. Es un muy buen espacio para ofrecer al visitante una perspectiva de primera mano de los servicios que brindas compartiendo opiniones reales de empresas y líderes con los que ya has trabajado.
+                                        <br><br>R. Giraldo</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div> <!-- end row -->
+
+            </div> <!-- end container -->
+        </section>
+
+        <!-- End testimonios -->
+
+         <!-- contacto  -->
+        <!-- <section class="section p-t-0" style="background-color: #e3f2ff;" id="contacto">
+            <div class="container">
+
+                <div class="row">
+                    <div class="col-sm-5">
+                        <div class="feat-description m-t-20" style="text-align: center;">
+                            <h1 style="color: #2372B7;">Chatee con nosotros</h1>
+                            <p class="text-muted" style="color: black;">Blvd. Topolobampo No.1210, Zona Industrial Jiquilpan, Ahome, Sinaloa. <br> C.P.  81255. <br><br> contactonaturartech@gmail.com <br> 461-219-7299</p>
+                            
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-sm-offset-1">
+
+                        <div style="color: #067fa6;"> -->
+
+                            <!-- form beggins -->
+                                
+                            <!-- <div class="form-group col-sm-6">
+                                <label for="Nombre">Nombre *</label>
+                                <br>
+                                <input type="text" name="Nombre" placeholder="Ingresa tu nombre" id="Nombre" class="form-control">
+                            </div>
+
+                            <div class="form-group col-sm-6">
+                                <label for="Email">Email *</label>
+                                <br>
+                                <input type="text" name="Email" placeholder="Ingresa tu email" id="Email" class="form-control">
+                            </div>
+
+                            <div class="form-group col-sm-6">
+                                <label for="Telefono">Telefono</label>
+                                <br>
+                                <input type="text" name="Telefono" placeholder="Introduce tu numero de telefono" id="Telefono" class="form-control">
+                            </div>
+                        
+                            <div class="form-group col-sm-6">
+                                <label for="Direccion">Direccion</label>
+                                <br>
+                                <input type="text" name="Direccion" placeholder="Ingresa tu direccion" id="Direccion" class="form-control">
+                            </div>
+                
+                            <div class="form-group col-sm-12">
+                                <label for="Asunto">Asunto</label>
+                                <br>
+                                <input type="text" name="Asunto" placeholder="Escribe el asunto" id="Asunto" class="form-control">
+                            </div>
+
+                            <div class="form-group col-sm-12">
+                                <label for="Mensaje">Mensaje</label>
+                                <br>
+                                <textarea type="text" name="Mensaje" placeholder="Escribe tu mensaje aqui..." id="Mensaje" class="form-control" rows="4" cols="50"></textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <div id="Preloader" hidden="true" align="center">--> 
+                                    
+                                    <!--<img src="<?php echo base_url('assets/myapp/img/preloader2.gif'); ?>" alt="validando..."> --> 
+                                <!--</div>
+                            </div>
+
+                            <button class="btn btn-primary btn-block text-uppercase waves-effect waves-light " onclick="EnviaMensaje()" id="BotonEnviaMensaje">Enviar</button> -->  
+                            
+                            <!-- form ends -->         
+                        <!--</div>
+                    </div> -->
+
+                 <!-- </div>--><!-- end row -->
+
+            <!--</div>--> <!-- end container -->
+        <!-- </section> -->
+        <!-- end contacto  -->
+
+        <!-- Features Alt -->
+        <section class="section">
+
+            <div class="container-fluid">
+
+                <div class="row">
+                    <div class="col-lg-12">
+
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d212.83053216882433!2d-108.15580359974007!3d31.40617610813591!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzHCsDI0JzIyLjEiTiAxMDjCsDA5JzIwLjgiVw!5e0!3m2!1ses-419!2smx!4v1736101840828!5m2!1ses-419!2smx" 
+                            width="100%" 
+                            height="500" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+        
+                    </div>
+
+                </div><!-- end row -->
+
+            </div> <!-- end container -->
+        </section>
+        <!-- end features alt -->
+
+         <!-- FOOTER -->
+         <footer class="footer">
+            <div class="container">
+                <div class="row">
+                 
+                    <div class="col-lg-4 col-lg-offset-3 col-md-7">
+                        <ul class="nav navbar-nav" style="color: white;">
+                            <li><a href="">CR4V+FM5 Casa Verde, Chihuahua</a></li>
+                            <li><a href="">©2025 </a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-2 col-md-2">
+                        <ul class="social-icons">
+                            <li><a href="https://www.facebook.com/share/1C3kL9wusj/?mibextid=wwXIfr" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="https://www.instagram.com/naturartech?igsh=OHd6YmlnbmM4M29v&utm_source=qr" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                        </ul>
+                    </div>
+                </div> <!-- end row -->
+            </div> <!-- end container -->
+        </footer>
+        <!-- End Footer -->
+    
+        <!-- Back to top -->    
+        <a href="#" class="back-to-top" id="back-to-top"> <i class="fa fa-angle-up"></i> </a>
+
+        <!-- js placed at the end of the document so the pages load faster -->
+        <script src="js/jquery-2.1.4.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+
+        <!-- Jquery easing -->                                                      
+        <script type="text/javascript" src="js/jquery.easing.1.3.min.js"></script>
+
+        <!--sticky header-->
+        <script type="text/javascript" src="js/jquery.sticky.js"></script>
+
+        <!--common script for all pages-->
+        <script src="js/jquery.app.js"></script>
+
+        <!-- Owl Carousel -->                                                      
+        <script type="text/javascript" src="js/owl.carousel.min.js"></script>
+
+        <script src="js/bootstrap-datepicker.min.js"></script>
+        
+        <script src="js/sweet-alert.js"></script>
+        
+        <script src="js/jquery.sweet-alert.init.js"></script>
+
+        <script src="js/MY_Functions.js"></script>
+
+        <script type="text/javascript">
+
+            function ShowPanel(){
+
+                $("#RegistroClientes").show();
+                $("#LoginTab").hide();
+            }
+
+            function HidePanel(){
+
+                $("#RegistroClientes").hide();
+                $("#LoginTab").show();
+            }
+
+            $('.owl-carousel').owlCarousel({
+                loop:true,
+                margin:10,
+                nav:false,
+                autoplay: true,
+                autoplayTimeout: 10000,
+                responsive:{
+                    0:{
+                        items:1
+                    }
+                }
+            })
+
+            $(document ).ready(function() {
+
+                $("#RegistroClientes").hide();
+
+                $('#FechaNCliente').datepicker({
+                    autoclose: true,
+                    todayHighlight: true,
+                    format: 'yyyy/mm/dd'
+                });
+
+                setTimeout(function() {
+                    //$('#modal-login').modal('show');
+                }, 3000);
+
+                
+              
+            });
+
+        </script>
+
+    </body>
+</html>
