@@ -39,95 +39,12 @@
 
 /*-----------------------------Index--------------------------------------*/
 
-.contenido {
-  position: relative;
-  z-index: 1;
-  text-align: center;
-  padding: 50px;
-  opacity: 0;
-  animation: mostrarContenido 2s forwards 2s; /* Retraso de 2s para mostrar después de la animación de la hoja */
-}
-
-.hoja {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 200px;
-  height: 200px;
-  background-color: #4caf50;
-  border-radius: 50%;
-  animation: cubrirPantalla 3s ease-in-out forwards; /* Animación para cubrir la pantalla */
-  transform: translate(-50%, -50%); /* Centrar la hoja */
-}
-
-@keyframes cubrirPantalla {
-  0% {
-      width: 200px;
-      height: 200px;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      opacity: 1;
-  }
-  80% {
-      width: 100vw;
-      height: 100vh;
-      top: 0;
-      left: 0;
-      transform: translate(0, 0);
-      opacity: 1;
-  }
-  100% {
-      width: 0;
-      height: 0;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      opacity: 0;
-  }
-}
-
-@keyframes mostrarContenido {
-  0% {
-      opacity: 0;
-  }
-  100% {
-      opacity: 1;
-  }
-}
-
-@-webkit-keyframes rotate {
-  from {
-    -webkit-transform: rotate(0deg);
-  }
-  to { 
-    -webkit-transform: rotate(360deg);
-  }
-}
-
-img.rotar {
-    -webkit-animation-name:            rotate; 
-    -webkit-animation-duration:        3s; 
-    -webkit-animation-iteration-count: infinite;
-    -webkit-animation-timing-function: linear;
-}
-
 #VideoIni {
   position: fixed;
   right: 0;
   bottom: 0;
   min-width: 50%;
   min-height: 50%;
-}
-
-#Nosotros {
-  background: url("../images/nosotros.jpg") no-repeat;
-  background-size: cover;         /* Ensures the image fills the screen */
-  background-position: center;    /* Keeps the focal point centered */
-  background-attachment: fixed;   /* Optional: keeps background static while scrolling */
-  width: 100vw;
-  height: 100vh;
-  
 }
 
 .info-container {
@@ -240,6 +157,16 @@ img.rotar {
 /*-----------------------------Index--------------------------------------*/
 
 /*-----------------------------Nosotros--------------------------------------*/
+
+#Nosotros {
+  background: url("../images/nosotros.jpg") no-repeat;
+  background-size: cover;         /* Ensures the image fills the screen */
+  background-position: center;    /* Keeps the focal point centered */
+  background-attachment: fixed;   /* Optional: keeps background static while scrolling */
+  width: 100vw;
+  height: 100vh;
+  
+}
 
 .bubbles-section {
   display: flex;
@@ -371,7 +298,78 @@ img.rotar {
 
 /*-----------------------------Nosotros--------------------------------------*/
 
+/*-----------------------------Productos--------------------------------------*/
+
+#Productos {
+  background: url("../images/productos.png") no-repeat;
+  background-size: cover;         /* Ensures the image fills the screen */
+  background-position: center;    /* Keeps the focal point centered */
+  background-attachment: fixed;   /* Optional: keeps background static while scrolling */
+  width: 100vw;
+  height: 100vh;
+}
+
+/* === Contenedor general de la sección transparente === */
+.section#Texto {
+  background: transparent;
+}
+
+.pulsating-square {
+  background: linear-gradient(135deg, #52b997, #206d99, #c7dfd9);
+  color: white;
+  padding: 2rem;
+  max-width: 35em;
+  text-align: center;
+  border-radius: 8px;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%,100% { transform: scale(1); }
+  50%    { transform: scale(1.05); }
+}
+.pulsating-square h1 {
+  margin-bottom: 1rem;
+}
+.pulsating-square h4 {
+  text-align: justify;
+  line-height: 2;
+}
+
+/* 2) La abeja será absoluta y ocupará un punto de partida en el centro */
+.bee {
+  position: absolute;      /* <— */
+  top: 50%;
+  left: 50%;
+  font-size: 5rem;
+  transform: translate(-50%, -50%);
+  animation:
+    buzz 0.3s ease-in-out infinite alternate,
+    fly 6s ease-in-out infinite;  /* <— nueva animación */
+}
+
+/* 3) Mantenemos el “zumbido” pequeño */
+@keyframes buzz {
+  from { transform: translate(-50%, -50%) scale(1); }
+  to   { transform: translate(-50%, -50%) scale(1.1); }
+}
+
+/* 4) Definimos la ruta de vuelo dentro del hexágono */
+@keyframes fly {
+  0%   { top: 50%; left: 50%; }
+  15%  { top: 20%; left: 40%; }
+  30%  { top: 10%; left: 60%; }
+  45%  { top: 30%; left: 75%; }
+  60%  { top: 60%; left: 80%; }
+  75%  { top: 75%; left: 50%; }
+  90%  { top: 65%; left: 25%; }
+  100% { top: 50%; left: 50%; }
+}
+
+/*-----------------------------Productos--------------------------------------*/
+
 /*======= 1.Reset ======== */
+
 body {
   /*font-family: 'Varela Round', sans-serif;*/
   color: #496174;

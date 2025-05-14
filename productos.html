@@ -38,7 +38,7 @@
 
     </head>
 
-    <body data-spy="scroll" data-target="#navbar-menu">
+    <body data-spy="scroll" data-target="#navbar-menu" id="Productos">
 
         <!-- Navbar -->
         <div class="navbar navbar-custom sticky navbar-fixed-top" role="navigation" id="sticky-nav">
@@ -56,9 +56,11 @@
                     </button>
 
                     <!-- LOGO -->
-                    <a class="navbar-brand logo" href="index.html">
-                       <img src="images/logoletras.png" width="150%" height="200%"  alt="logo...">
+                    <a class="" href="index.html" >
+                        <img src="images/logo-gif.gif" width="80px" height="80px"  alt="logo..." class="hidden-md hidden-lg">
+                        <img src="images/letras-blanco-t.png" width="360px" height="60px"  alt="logo..." class="hidden-xs hidden-sm"> 
                     </a>
+
 
                 </div>
                 <!-- end navbar-header -->
@@ -84,7 +86,7 @@
                             <a data-toggle="modal" data-target="#modal-login" class="btn btn-white-bordered navbar-btn nav-link">Inicia Sesion</a>
                         </li>
                         <li class="zoom">
-                            <a href="https://wa.me/+5214421723447?text=Hola%20quisiera%20recibir%20mas%20información%20sobre%20su%20producto" target="_blank"  class="nav-link"><i class="fa fa-whatsapp fa-lg" aria-hidden="true"></i></a>
+                            <a href="https://wa.me/+5216361176326?text=Hola%20quisiera%20recibir%20mas%20información%20sobre%20su%20producto" target="_blank" class="nav-link" ><i class="fa fa-whatsapp fa-lg" aria-hidden="true" ></i></a>
                         </li> 
                     </ul>
 
@@ -101,7 +103,7 @@
                 <div class="modal-content"> 
                     <div class="modal-header"> 
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button> 
-                        <h4 class="modal-title" style="text-align: center;"><img src="images/logo.jpeg" width="10%" height="10%" style= "border-radius: 100%" alt="logo..."> Inicia sesion o registrate</h4> 
+                        <h4 class="modal-title" style="text-align: center;"><img src="images/logo-gif.gif" width="80px" height="80px" style= "border-radius: 100%" alt="logo...">  Inicia sesion o registrate</h4> 
                     </div> 
                     <div class="modal-body"> 
 
@@ -196,25 +198,33 @@
             </div>
         </div><!-- /.modal -->
 
+        <br><br><br><br><br>
+
         <!-- Texto -->
-        <section class="section" id="Texto" >
+        <section class="section" id="Texto">
+            <div class="container">
+              <div class="row">
 
-            <div class=" ">
-
-                <div class="row" >
-                    <div class="col-lg-6 home bg-img-4">
+                 <div class="col-lg-6 ">
+                    <div class="">
+                     
                     </div>
-                    <div class="col-lg-6 table-responsive" style="color: #2372B7;">
-                        <br><br>
-                        <h1 class="" style="text-align: center;">Productos exclusivos</h1>
-                        <br>
-                        <h4 class="" style="text-align: justify;  margin: 0 auto; width: 35em;  line-height: 2;">La empresa ofrece una amplia variedad de soluciones para la agricultura, desde reguladores de crecimiento hasta desestresantes vegetativos, cada uno diseñado para abordar necesidades específicas de las plantas y los cultivos. Estos productos, que van desde bioestimulantes naturales hasta fertilizantes acomplejados, están destinados a mejorar la calidad y la productividad de los cultivos mientras se promueve la sostenibilidad y el cuidado del medio ambiente.</h4>
-                    </div>
-                </div> <!-- end row -->
+                  </div>
 
+                <!-- Columna derecha: pulsando -->
+                <div class="col-lg-6">
+                    <div class="pulsating-square mx-auto">
+                    <h1>Productos exclusivos</h1>
+                    <h4>
+                        La empresa ofrece una amplia variedad de soluciones para la agricultura, desde reguladores de crecimiento hasta desestresantes vegetativos, cada uno diseñado para abordar necesidades específicas de las plantas y los cultivos. Estos productos, que van desde bioestimulantes naturales hasta fertilizantes acomplejados, están destinados a mejorar la calidad y la productividad de los cultivos mientras se promueve la sostenibilidad y el cuidado del medio ambiente.
+                    </h4>
+                    </div>
+                </div>
+                </div>
             </div>
-
+            <span class="bee">🐝</span>
         </section>
+          
         <!-- end Texto -->
 
         <!-- productos section -->
@@ -232,6 +242,7 @@
                                         <h2 class="plan-price">$24</h2>
                                         <div class="plan-duration">Per License</div>
                                     </div>
+                                    <img src="images/prod-real.png" width="100px" height="250px" alt="producto">
                                     <ul class="plan-stats list-unstyled">
                                         <li> <i class="pe-7s-server"></i>Number of end products <b>1</b></li>
                                         <li> <i class="pe-7s-graph"></i>Customer support</li>
@@ -253,6 +264,7 @@
                                         <h2 class="plan-price">$24</h2>
                                         <div class="plan-duration">Per License</div>
                                     </div>
+                                    <img src="images/prod-real.png" width="100px" height="250px" alt="producto">
                                     <ul class="plan-stats list-unstyled">
                                         <li> <i class="pe-7s-server"></i>Number of end products <b>1</b></li>
                                         <li> <i class="pe-7s-graph"></i>Customer support</li>
@@ -274,6 +286,139 @@
                                         <h2 class="plan-price">$24</h2>
                                         <div class="plan-duration">Per License</div>
                                     </div>
+                                    <img src="images/prod-real.png" width="100px" height="250px" alt="producto">
+                                    <ul class="plan-stats list-unstyled">
+                                        <li> <i class="pe-7s-server"></i>Number of end products <b>1</b></li>
+                                        <li> <i class="pe-7s-graph"></i>Customer support</li>
+                                        <li> <i class="pe-7s-mail-open"></i>Free Updates</li>
+                                        <li> <i class="pe-7s-tools"></i>24x7 Support</li>
+                                    </ul>
+
+                                    <div class="text-center">
+                                        <a href="#" class="btn btn-sm btn-custom">Ficha tecnica</a>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="item" >
+                            <article class="pricing-column col-lg-12 col-md-12">
+                                <div class="inner-box">
+                                    <div class="plan-header text-center">
+                                        <h3 class="plan-title">Producto 4</h3>
+                                        <h2 class="plan-price">$24</h2>
+                                        <div class="plan-duration">Per License</div>
+                                    </div>
+                                    <img src="images/prod-real.png" width="100px" height="250px" alt="producto">
+                                    <ul class="plan-stats list-unstyled">
+                                        <li> <i class="pe-7s-server"></i>Number of end products <b>1</b></li>
+                                        <li> <i class="pe-7s-graph"></i>Customer support</li>
+                                        <li> <i class="pe-7s-mail-open"></i>Free Updates</li>
+                                        <li> <i class="pe-7s-tools"></i>24x7 Support</li>
+                                    </ul>
+
+                                    <div class="text-center">
+                                        <a href="#" class="btn btn-sm btn-custom">Ficha tecnica</a>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="item" >
+                            <article class="pricing-column col-lg-12 col-md-12">
+                                <div class="inner-box">
+                                    <div class="plan-header text-center">
+                                        <h3 class="plan-title">Producto 5</h3>
+                                        <h2 class="plan-price">$24</h2>
+                                        <div class="plan-duration">Per License</div>
+                                    </div>
+                                    <img src="images/prod-real.png" width="100px" height="250px" alt="producto">
+                                    <ul class="plan-stats list-unstyled">
+                                        <li> <i class="pe-7s-server"></i>Number of end products <b>1</b></li>
+                                        <li> <i class="pe-7s-graph"></i>Customer support</li>
+                                        <li> <i class="pe-7s-mail-open"></i>Free Updates</li>
+                                        <li> <i class="pe-7s-tools"></i>24x7 Support</li>
+                                    </ul>
+
+                                    <div class="text-center">
+                                        <a href="#" class="btn btn-sm btn-custom">Ficha tecnica</a>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="item" >
+                            <article class="pricing-column col-lg-12 col-md-12">
+                                <div class="inner-box">
+                                    <div class="plan-header text-center">
+                                        <h3 class="plan-title">Producto 6</h3>
+                                        <h2 class="plan-price">$24</h2>
+                                        <div class="plan-duration">Per License</div>
+                                    </div>
+                                    <img src="images/prod-real.png" width="100px" height="250px" alt="producto">
+                                    <ul class="plan-stats list-unstyled">
+                                        <li> <i class="pe-7s-server"></i>Number of end products <b>1</b></li>
+                                        <li> <i class="pe-7s-graph"></i>Customer support</li>
+                                        <li> <i class="pe-7s-mail-open"></i>Free Updates</li>
+                                        <li> <i class="pe-7s-tools"></i>24x7 Support</li>
+                                    </ul>
+
+                                    <div class="text-center">
+                                        <a href="#" class="btn btn-sm btn-custom">Ficha tecnica</a>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="item" >
+                            <article class="pricing-column col-lg-12 col-md-12">
+                                <div class="inner-box">
+                                    <div class="plan-header text-center">
+                                        <h3 class="plan-title">Producto 7</h3>
+                                        <h2 class="plan-price">$24</h2>
+                                        <div class="plan-duration">Per License</div>
+                                    </div>
+                                    <img src="images/prod-real.png" width="100px" height="250px" alt="producto">
+                                    <ul class="plan-stats list-unstyled">
+                                        <li> <i class="pe-7s-server"></i>Number of end products <b>1</b></li>
+                                        <li> <i class="pe-7s-graph"></i>Customer support</li>
+                                        <li> <i class="pe-7s-mail-open"></i>Free Updates</li>
+                                        <li> <i class="pe-7s-tools"></i>24x7 Support</li>
+                                    </ul>
+
+                                    <div class="text-center">
+                                        <a href="#" class="btn btn-sm btn-custom">Ficha tecnica</a>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="item" >
+                            <article class="pricing-column col-lg-12 col-md-12">
+                                <div class="inner-box">
+                                    <div class="plan-header text-center">
+                                        <h3 class="plan-title">Producto 8</h3>
+                                        <h2 class="plan-price">$24</h2>
+                                        <div class="plan-duration">Per License</div>
+                                    </div>
+                                    <img src="images/prod-real.png" width="100px" height="250px" alt="producto">
+                                    <ul class="plan-stats list-unstyled">
+                                        <li> <i class="pe-7s-server"></i>Number of end products <b>1</b></li>
+                                        <li> <i class="pe-7s-graph"></i>Customer support</li>
+                                        <li> <i class="pe-7s-mail-open"></i>Free Updates</li>
+                                        <li> <i class="pe-7s-tools"></i>24x7 Support</li>
+                                    </ul>
+
+                                    <div class="text-center">
+                                        <a href="#" class="btn btn-sm btn-custom">Ficha tecnica</a>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="item" >
+                            <article class="pricing-column col-lg-12 col-md-12">
+                                <div class="inner-box">
+                                    <div class="plan-header text-center">
+                                        <h3 class="plan-title">Producto 9</h3>
+                                        <h2 class="plan-price">$24</h2>
+                                        <div class="plan-duration">Per License</div>
+                                    </div>
+                                    <img src="images/prod-real.png" width="100px" height="250px" alt="producto">
                                     <ul class="plan-stats list-unstyled">
                                         <li> <i class="pe-7s-server"></i>Number of end products <b>1</b></li>
                                         <li> <i class="pe-7s-graph"></i>Customer support</li>
@@ -298,18 +443,18 @@
         <footer class="footer">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-3 col-md-3">
-                        <img src="images/logoletras.png" width="100%" height="120%"  alt="logo...">
-                        <a class="navbar-brand logo" href="index.html">
-                            <br> ©2025
-                            
-                        </a>
-                        
+                 
+                    <div class="col-lg-4 col-lg-offset-3 col-md-7">
+                        <ul class="nav navbar-nav" style="color: white;">
+                            <li><a href="">CR4V+FM5 Casa Verde, Chihuahua</a></li>
+                            <li><a href="">©2025 </a></li>
+                        </ul>
                     </div>
-
-                    <div class="col-lg-3 col-md-3">
-                        <p>CR4V+FM5 Casa Verde, Chihuahua</p>
-                        
+                    <div class="col-lg-2 col-md-2">
+                        <ul class="social-icons">
+                            <li><a href="https://www.facebook.com/share/1C3kL9wusj/?mibextid=wwXIfr" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="https://www.instagram.com/naturartech?igsh=OHd6YmlnbmM4M29v&utm_source=qr" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                        </ul>
                     </div>
                 </div> <!-- end row -->
             </div> <!-- end container -->
@@ -359,17 +504,22 @@
             }
 
             $('.owl-carousel').owlCarousel({
-                loop:true,
-                margin:10,
-                nav:false,
+                loop: true,
+                margin: 10,
+                nav: false,
                 autoplay: true,
                 autoplayTimeout: 10000,
-                responsive:{
-                    0:{
-                        items:1
+                responsive: {
+                    // desde 0px hasta 767px de ancho
+                    0: {
+                    items: 1
+                    },
+                    // desde 768px en adelante
+                    768: {
+                    items: 3
                     }
                 }
-            })
+                });
 
             $(document ).ready(function() {
 
