@@ -328,6 +328,7 @@
   0%,100% { transform: scale(1); }
   50%    { transform: scale(1.05); }
 }
+
 .pulsating-square h1 {
   margin-bottom: 1rem;
 }
