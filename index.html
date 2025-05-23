@@ -61,7 +61,7 @@
 
                     <a class="" href="index.html" >
                         <img src="images/logo-gif.gif" width="80px" height="80px"  alt="logo..." class="hidden-md hidden-lg">
-                        <img src="images/letras-blanco-t.png" width="360px" height="60px"  alt="logo..." class="hidden-xs hidden-sm"> 
+                        <img src="images/letras-blanco-t.png" width="300px" height="60px"  alt="logo..." class="hidden-xs hidden-sm"> 
                     </a>
 
                 </div>
@@ -84,9 +84,9 @@
                         <li>
                             <a href="#testimonios" class="nav-link">Testimonios</a>
                         </li>
-                        <li>
+                         <!--<li>
                             <a href="#testimonios" class="nav-link">Responsabilidad social</a>
-                        </li>
+                        </li>-->
                         <li>
                             <a data-toggle="modal" data-target="#modal-login" class="btn btn-white-bordered navbar-btn">Inicia Sesion</a>
                         </li>
@@ -204,11 +204,18 @@
         </div><!-- /.modal -->
 
         <!-- HOME -->
-        <video autoplay muted loop id="VideoIni">
-            <source src="images/intro.mp4" type="video/mp4">
-        </video>
+        
 
         <section class="home" id="home">
+
+             <div class="video-container">
+                <video autoplay muted loop playsinline id="bg-video">
+                    <source src="images/intro-o.mp4" type="video/mp4">
+                    Tu navegador no soporta video HTML5.
+                </video>
+                <div class="bg-overlay"></div>
+            </div>
+
             <div class="bg-overlay"></div>
             <div class="container">
                 <div class="row">
