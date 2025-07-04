@@ -253,6 +253,7 @@
   overflow: auto;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
   animation: none;
+  text-align: justify;
 }
 
 .reveal-text {
@@ -355,7 +356,7 @@
   transform: translate(-50%, -50%);
   animation:
     buzz 0.3s ease-in-out infinite alternate,
-    fly 6s ease-in-out infinite;  /* <— nueva animación */
+    fly 10s ease-in-out infinite;  /* <— nueva animación */
 }
 
 /* 3) Mantenemos el “zumbido” pequeño */
